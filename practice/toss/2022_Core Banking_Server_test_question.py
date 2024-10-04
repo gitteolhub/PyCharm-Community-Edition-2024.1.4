@@ -62,4 +62,14 @@
 #     }
 # }
 # endregion
-
+s = input()
+cool_number = -1
+for i in range(len(s) - 2):
+    if s[i] == s[i + 1] == s[i + 2]:
+        if s[i] == '0':
+            print('0')
+        elif int(s[i] * 3) > cool_number:
+            cool_number = s[i] * 3
+        print(s[i] * 3)
+    else:
+        print('-1')
