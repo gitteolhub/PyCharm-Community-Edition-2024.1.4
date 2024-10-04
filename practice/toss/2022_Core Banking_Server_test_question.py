@@ -38,18 +38,8 @@
 # 입력: s = “123”
 # 출력: -1
 
-# region 모범 답안
-# 1
-# 2
-# 3
-# 4
-# 5
-# 6
-# 7
-# 8
-# 9
-# 10
-# 11
+# region  모범 답안 - 코틀린
+
 # class Solution {
 #     fun solution(s: String): Int {
 #         var biggest = -1
@@ -66,10 +56,11 @@ s = input()
 cool_number = -1
 for i in range(len(s) - 2):
     if s[i] == s[i + 1] == s[i + 2]:
-        if s[i] == '0':
-            print('0')
-        elif int(s[i] * 3) > cool_number:
-            cool_number = s[i] * 3
-        print(s[i] * 3)
-    else:
-        print('-1')
+        if int(s[i]) > cool_number:
+            cool_number = int(s[i])
+if cool_number == 0:
+    print('0')
+elif cool_number == -1:
+    print('-1')
+else:
+    print(str(cool_number) * 3)
