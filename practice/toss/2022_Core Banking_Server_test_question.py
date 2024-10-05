@@ -59,8 +59,8 @@ for i in range(len(s) - 2):
         if int(s[i]) > cool_number:
             cool_number = int(s[i])
 if cool_number == 0:
-    print('0')
+    print(cool_number)
 elif cool_number == -1:
-    print('-1')
+    print(cool_number)
 else:
-    print(str(cool_number) * 3)
+    print(int(str(cool_number) * 3))
